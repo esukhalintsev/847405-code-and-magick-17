@@ -58,12 +58,12 @@
     <div class="demo"></div>
 
     <div class="setup-open">
-      <img src="./img/user-1.jpg" class="setup-open-icon" tabindex="0">
+      <img src="./img/user-1.jpg" class="setup-open-icon">
     </div>
   </header>
 
   <div class="overlay setup hidden">
-    <form class="setup-wizard-form" method="post" enctype="multipart/form-data" action="https://js.dump.academy/code-and-magick" autocomplete="off">
+    <form class="setup-wizard-form" method="post" enctype="multipart/form-data" autocomplete="off">
 
       <div class="setup-title">
         <div class="setup-user">
@@ -72,11 +72,11 @@
             <input type="file" name="avatar">
           </div>
           <label>
-            <input type="text" name="username" minlength="2" maxlength="25" required class="setup-user-name" value="Синий Пендальф" />
+            <input type="text" name="username" maxlength="25" required class="setup-user-name" value="Синий Пендальф" />
           </label>
         </div>
 
-        <span class="setup-close" tabindex="0">&times;</span>
+        <span class="setup-close">&times;</span>
       </div>
 
 
@@ -96,7 +96,7 @@
       <div class="setup-player">
         <div class="setup-wizard-appearance">
           <div class="setup-wizard-wrap">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 62 86" class="setup-wizard" tabindex="0">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 62 86" class="setup-wizard">
               <g class="wizard">
                 <use xlink:href="#wizard-coat" class="wizard-coat" style="fill: #6589a4"></use>
                 <use xlink:href="#wizard-head" class="wizard-head"></use>
@@ -173,37 +173,26 @@
   </template>
 
   <script>
-    //Размер фаербола в пикселях
     var fireballSize = 22;
-    //Скорость фаербола в зависимости от направления
     var getFireballSpeed = function(left) {
       return left ? 5 : 2;
     };
-    //Скорость мага
     var wizardSpeed = 3;
-    //Ширина мага
     var wizardWidth = 70;
-    //Высота мага
+    
     var getWizardHeight = function() {
-      var wizardHeight = 1.337 * wizardWidth;
-      return wizardHeight;
+      return 1.337 * wizardWidth;
     };
-    //Положение мага по горизонтали
     var getWizardX = function(width) {
-      var wizardX = width / 2;
-      return wizardX;
+      return width / 2;
     };
-    //Положение мага по вертикали
     var getWizardY = function(height) {
-      var wizardY = height * 2 / 3;
-      return wizardY;
+      return height * 2 / 3
     };
-
   </script>
-  <script></script>
-  <script src="js/setup.js"></script>
   <script src="js/stat.js"></script>
   <script src="js/game.js"></script>
+  <script src="js/setup.js"></script>
 
 </body>
 
